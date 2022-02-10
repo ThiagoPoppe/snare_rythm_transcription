@@ -1,4 +1,6 @@
+ipython
 librosa
+midi2audio
 matplotlib
 music21
 pandas
