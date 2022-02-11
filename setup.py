@@ -11,6 +11,6 @@ if __name__ == "__main__":
         packages=['snare_rythm_transcription'],
         install_requires=[line.strip() for line in open('requirements.txt')],
         version='0.01',
-        description='Dependênciasw para executar o projeto Snare Rythm Transcription da disciplina MIR do DCC/UFMG',
+        description='Dependências para executar o projeto Snare Rythm Transcription da disciplina MIR do DCC/UFMG',
         author='Thiago Martin Poppe'
     )

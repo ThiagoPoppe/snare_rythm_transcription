@@ -1,13 +1,16 @@
 import os
+import copy
 import IPython.display as ipd
 from midi2audio import FluidSynth
 from .exceptions import SoundFontNotFound
 
 def show(music):
-    png = music.write('lily.png')
-    ipd.display(ipd.Image(str(png)))
+    music_cp = copy.deepcopy(music)
+    for note in music_cp.recurse().notes:
+        note.name = 'B4' # toques na caixa correspondem à posição do B4
+    music_cp.show()
 
-def play(music, wavname='music.wav', sound_font='/usr/share/sounds/sf2/FluidR3_GM.sf2'):
+def play(music, wavname='music.wav', sound_font='pns_drum_kit.SF2'):
     if not os.path.exists(sound_font):
         raise SoundFontNotFound(sound_font)
 
