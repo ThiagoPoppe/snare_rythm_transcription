@@ -1,8 +1,9 @@
+numpy
+scipy
+pandas
 ipython
+music21
 librosa
 midi2audio
 matplotlib
-music21
-pandas
-numpy
-scipy
+beautifulsoup4
